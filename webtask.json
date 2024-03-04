@@ -1,12 +1,12 @@
 {
-  "title": "Real-time Webtask Logs",
-  "name": "auth0-extension-realtime-logs",
+  "title": "Improved Real-time Webtask Logs",
+  "name": "auth0-extension-realtime-logs-miccou",
   "version": "1.3.7",
   "preVersion": "1.3.6",
-  "author": "Auth0, Inc",
-  "description": "Access real-time webtask logs",
+  "author": "miccou",
+  "description": "An improved version of Auth0s real-time webtask logs extension",
   "type": "application",
-  "repository": "https://github.com/auth0/auth0-extension-realtime-logs",
+  "repository": "https://github.com/miccou/auth0-extension-realtime-logs",
   "docsUrl": "https://auth0.com/docs/extensions/realtime-webtask-logs",
   "logoUrl": "https://cdn.auth0.com/extensions/auth0-extension-realtime-logs/assets/logo.svg",
   "keywords": [

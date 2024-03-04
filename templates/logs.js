@@ -108,7 +108,7 @@ module.exports = `<!DOCTYPE html5>
           <div class="col-xs-12 wrapper">
             <section class="content-page current">
               <div class="content-header">
-                <h1>Real-time Webtask Logs</h1>
+                <h1>Improved Real-time Webtask Logs</h1>
                 <button class="btn btn-default pull-right js-full-screen">Full Screen Mode</button>
               </div>
             </section>
@@ -126,6 +126,20 @@ module.exports = `<!DOCTYPE html5>
         autoReconnect: false,
         theme: 'dark'
       });
+
+      const targetDiv = document.querySelector('.wt-logs-list-container');
+      
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'childList') {
+            mutation.addedNodes.forEach((addedNode) => {
+              console.log('New child div added:', addedNode);
+            });
+          }
+        });
+      });
+      
+      observer.observe(targetDiv, { childList: true });
 
       $('.js-full-screen').on('click', function () {
         $('.dashboard-header').hide();
